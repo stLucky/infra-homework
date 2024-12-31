@@ -19,6 +19,8 @@ jobs:
     needs: dependencies
     
     steps:
+      - uses: actions/checkout@v4
+  
       - name: Linters
         run: yarn linters
 
@@ -27,6 +29,8 @@ jobs:
     needs: dependencies
     
     steps:
+      - uses: actions/checkout@v4
+          
       - name: Build
         run: yarn build
 
@@ -35,5 +39,7 @@ jobs:
     needs: [dependencies, build]
     
     steps:
+      - uses: actions/checkout@v4
+          
       - name: Deploy
         run: yarn deploy

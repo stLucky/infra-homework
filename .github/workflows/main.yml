@@ -28,6 +28,9 @@ jobs:
         with: 
             node-version: '22.11.0'
             cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn
   
       - name: Linters
         run: yarn linters
@@ -42,6 +45,9 @@ jobs:
         with: 
             node-version: '22.11.0'
             cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn
           
       - name: Build
         run: yarn build
@@ -56,6 +62,9 @@ jobs:
         with: 
             node-version: '22.11.0'
             cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn
           
       - name: Deploy
         run: yarn deploy

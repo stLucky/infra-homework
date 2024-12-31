@@ -14,11 +14,23 @@ jobs:
       - name: Install dependencies
         run: yarn
 
+  linters:
+    runs-on: ubuntu-latest
+    
+    steps:
       - name: Linters
         run: yarn linters
 
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
       - name: Build
         run: yarn build
 
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
       - name: Deploy
         run: yarn deploy
